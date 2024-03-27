@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resizable Textbox Table</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    textarea {
+        width: calc(100% - 24px);
+        height: 100%;
+        resize: none;
+        border: 1px solid #ccc;
+        padding: 8px;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+    #small textarea {
+        height: 100px;
+    }
+    #medium textarea {
+        height: 150px;
+    }
+    #large textarea {
+        height: 250px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<form action="follow_up.php" method="post">
+    <table>
+        <tr>
+            <th>OB No.</th>
+        </tr>
+        <tr>
+            <td id="reportId">
+                <textarea name="reportId" id="reportId"  placeholder="Enter text here..." required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>Officer Names</th>
+        </tr>
+        <tr>
+            <td id="medium">
+                <textarea name="officer_names" placeholder="Enter text here..." required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>Follow-up Actions</th>
+        </tr>
+        <tr>
+            <td id="large">
+                <textarea name="follow_up_actions" placeholder="Enter text here..." required></textarea>
+            </td>
+        </tr>
+    </table><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
